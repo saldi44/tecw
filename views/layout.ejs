@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Bayern de los Caídos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <link rel='stylesheet'
+    type='text/css'
+    media='only screen and (min-width: 800px) and (min-device-width: 600px)'
+    href='/stylesheets/wide.css'/>
+    <link rel='stylesheet'
+    type='text/css'
+    media='only screen and (max-width: 480px)'
+    href='/stylesheets/smartphone.css'/>
+  </head>
+  <body>
+    <div id="page">
+      <header class="main" id="mainHeader">
+        <h1>Blog oficial del Bayern de los Caídos</h1>
+      </header>
+      <table>
+        <tr>
+          <td width="10%">
+            <nav class="menu">
+              <ul class = disco>
+                <li><a href="/" class = index>Home</a></li>
+                <li><a href="/posts" class = index>Posts</a></li>
+                <li><a href="/author" class = index>Autores</a></li>
+              </ul>
+            </nav>
+          </td>
+          <td width="30%">
+            <section class="main" id="mainSection">
+              <%- body %>
+            </section>
+          </td>
+          <td width="10%">
+            <p align= "right"> <b>Patrocinadores principales del equipo:</b></p>
+            <img class = "patrocinador" src="images/decathlon.png" alt="Patrocinador principal: Decathlon">
+            <img class = "patrocinador" src="images/BioCoin.png" alt="Patrocinador secundario: BioCoin">
+          </td>
+        </tr>
+      </table>
+      </br>
+      <footer id="mainFooter">
+          El Bayern de los Caídos es un equipo de fútbol sala creado en 
+          2022 por estudiantes de Segundo del grado de Datos de la 
+          ETSIT UPM. Pasión, compañerismo y fé son los valores que definen
+          a este gran club en su día a día.
+      </footer>
+      <footer id="secondaryFooter">
+        Bayern de los Caídos 2023 todos los derechos reservados
+      </footer>
+    </div>
+  </body>
+</html>

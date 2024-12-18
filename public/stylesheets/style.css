@@ -1,0 +1,233 @@
+body {
+  --primary: #434141;
+  --secondary: #ae5353;
+  font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 2% 2% 2% 2%;
+  background: #984242;
+  color: var(--primary);
+ }
+ #page {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 10px auto;
+  padding: 0px;
+ }
+ .main {
+  flex: 1 100%;
+  padding: 2px;
+  margin: 1px;
+ }
+ #mainHeader {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  background-color: var(--primary);
+ }
+ #mainNav {
+  text-align: center;
+  border-bottom: 1px solid var(--secondary);
+  border-right: 0px;
+  }
+ #mainFooter {
+  font-size: small;
+  padding: 3px 0;
+  text-align: center;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  color: #000000;  
+ }
+ #secondaryFooter {
+  font-size: x-small;
+  padding: 3px 0;
+  text-align: center;
+  color: #000000;  
+ }
+ #mainHeader h1 {
+  margin: 8px;
+ }
+ #mainNav a {
+  margin: 0px 5px;
+ }
+ #mainSection {
+  padding: 0px 10px;
+  text-align: left;
+ }
+ a {
+  color: #000000;
+ }
+
+h1 {
+  background: #434141;
+  color: #ffffff;
+  text-align: center;
+  margin: 0 0 5% 0;
+  padding: 0.5em;
+  margin: 0 0 5% 0;
+}
+
+h1.titulos_post {
+  background: #902727;
+}
+
+table {
+  width: 100%;
+  height: 100%;
+  text-align: "left";
+  border: solid 5px rgb(0, 0, 0); 
+  margin: 0 0 5% 0;
+  padding: 0.5em;
+}
+
+img.autor{
+  width: 80%;
+  height: 80%; 
+  border-radius: 10px;
+  border: 2px solid #000000;
+  object-fit: cover;
+}
+img.patrocinador{
+  width: 100px;
+  height: 100px; 
+  float: right;
+  border-radius: 10px;
+  border: 2px solid #000000;
+  margin: 3% 0 0 3%;
+  object-fit: cover;
+}
+ul.disco {
+  list-style-type: circle;
+}
+a.index{
+  font-size: xx-large;
+}
+.attachment {
+  border-radius: 10px;
+  border: 2px solid #000000;
+  object-fit: cover;
+  width: 100px;
+  height: 100px;
+ }
+
+.cardBox {
+  float: left;
+  font-size: 1.2em;
+  margin: 1% 0 0 1%;
+  perspective: 800px;
+  transition: all 0.3s ease 0s;
+  width: 48%;
+}
+
+.cardBox:hover .card {
+  transform: rotateY( 180deg);
+}
+
+.card {
+  background: #2a2929;
+  cursor: default;
+  height: 500px;
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease 0s;
+  width: 100%;
+  -webkit-animation: giro 1s 1;
+  animation: giro 1s 1;
+}
+
+.card p {
+  margin-bottom: 1.8em;
+}
+
+.card .front,
+.card .back {
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  color: rgb(152, 37, 37);
+  display: block;
+  font-size: 1.2em;
+  height: 100%;
+  padding: 0.8em;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  overflow: auto;
+}
+
+.card .front strong {
+  background: #fff;
+  border-radius: 100%;
+  color: #222;
+  font-size: 1.5em;
+  line-height: 30px;
+  padding: 0 7px 4px 6px;
+}
+
+.card .back {
+  transform: rotateY( 180deg);
+}
+
+.card .back a {
+  padding: 0.3em 0.5em;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 1px;
+  font-size: 0.9em;
+  transition: all 0.2s ease 0s;
+}
+
+.card .back a:hover {
+  background: #fff;
+  color: #333;
+  text-shadow: 0 0 1px #333;
+}
+
+.cardBox:nth-child() .card .back {
+  background: rgb(100, 136, 237);
+}
+
+.cardBox:nth-child(2) .card {
+  -webkit-animation: giro 1.5s 1;
+  animation: giro 1.5s 1;
+}
+
+.cardBox:nth-child(3) .card {
+  -webkit-animation: giro 2s 1;
+  animation: giro 2s 1;
+}
+
+.cardBox:nth-child(4) .card {
+  -webkit-animation: giro 2.5s 1;
+  animation: giro 2.5s 1;
+}
+
+@-webkit-keyframes giro {
+  from {
+    transform: rotateY( 180deg);
+  }
+  to {
+    transform: rotateY( 0deg);
+  }
+}
+
+@keyframes giro {
+  from {
+    transform: rotateY( 180deg);
+  }
+  to {
+    transform: rotateY( 0deg);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .cardBox {
+    margin-left: 2.8%;
+    margin-top: 3%;
+    width: 46%;
+  }
+  .card {
+    height: 285px;
+  }
+  .cardBox:last-child {
+    margin-bottom: 3%;
+  }
+}
+
+ 

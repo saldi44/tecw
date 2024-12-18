@@ -1,0 +1,26 @@
+<section>
+    <div>
+        <a href="/posts/<%= post.id %>/attachment" class="button"><% include ../attachments/attachment %> </a>
+    </div>
+    </br></br>
+    <div class="wideRow">
+        <label for="title" class="itemNarrow">Title *:</label>
+        <input type="text" class="itemWide" id="title" name="title" value="<%= post.title %>"
+        placeholder="Title" autocomplete="off"/>
+    </div>
+    </br>
+    <div class="wideRow">
+        <label for="body" class="itemNarrow">Body *:</label>    
+        <input type="text" class="itemWide" id="body" name="body" value="<%= post.body %>"
+        placeholder="Body" autocomplete="off"/>
+    </div>
+    </br>
+    <div>
+        <label for="img">Attach file (Max size 20MB):</label>
+        <input type="file" id="img" name="image"/>
+    </div>
+    </br>
+    <a href="/posts" class="button">Cancel</a>
+    <input type="submit" value="Save"/> </br></br>
+    <label>*Los campos Title y Body no pueden guardarse vacíos</label>
+</section>

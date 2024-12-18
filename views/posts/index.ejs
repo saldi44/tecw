@@ -1,0 +1,36 @@
+<section>
+    <title>Lista de Posts</title>
+
+    <h1>Posts:</h1>
+    <table>
+     <% for (let post of posts) { %>
+        <tr>            
+            <td>
+                <a href="/posts/<%= post.id %>/attachment" class="button"><% include ../attachments/attachment %> </a>
+            </td>
+            </td>
+            <td>
+                <h1 class = "titulos_post" ><%= post.title %></h1>
+            </td>
+
+            <td>
+                <a href="/posts/<%= post.id %>" class="button">Show</a>
+            </td>
+            <td>
+                <a href="/posts/<%= post.id %>/edit" class="button">Edit</a>
+            </td>
+            <td>
+                <a href="/posts/<%= post.id %>?_method=delete"
+                onClick="return confirm('Delete Post: <%= post.title %>');"
+                class="button">Delete</a>
+            </td>
+            <td>
+                <a href="/posts/<%= post.id %>/attachment?_method=delete"
+                onClick="return confirm('Delete attachment');"
+                class="button">Delete attachment</a>
+            </td>
+        </tr>
+     <% } %>
+    </table>
+    <a href="/posts/new" class="button">Create New Post</a>
+</section>
